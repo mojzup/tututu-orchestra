@@ -1,0 +1,8 @@
+<header>
+  <nav>
+    <a href="/"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+    <a href="/about/"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
+    <a href="/gallery/"{% if page.url == '/gallery/' %} aria-current="page"{% endif %}>Gallery</a>
+    <a href="/press/"{% if page.url == '/press/' %} aria-current="page"{% endif %}>Press &amp; Booking</a>
+  </nav>
+</header>
