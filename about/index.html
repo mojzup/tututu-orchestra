@@ -1,250 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About - Tututu Orchestra</title>
-  <link rel="icon" type="image/png" href="/images/sun.png" />
-  
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+---
+layout: default
+title: About
+description: "About Tututu Orchestra, an international conducted improvisation orchestra led by Mojca Zupančič."
+css: about
+---
+<main>
+  <section class="hero"></section>
 
-  <style>
-    @font-face {
-      font-family: 'Herald Square';
-      src: url('/fonts/herald-square.squarenf.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
-    }
+  <section class="about-section">
+    <h1>About Us</h1>
+    <p>Tututu Orchestra is a dynamic collective of musicians based in the Netherlands, drawing inspiration from traditions such as jazz, impressionism, and folk music from around the world.</p>
+    <p>The specialty of the orchestra is the use of compositional fragments as a driving force for guided improvisation. With a desire to combine orchestral sound with the fluidity of a small combo, the interplay between the orchestra and the conductress takes center stage — at times full of theatrical expressionism.</p>
+    <p>Under the direction of conductress Mojca Zupančič, the orchestra performs a wide range of compositions full of enchanting melodies, groovy rhythms, and playfully arranged passages. Sometimes, however, the orchestra runs wild, tearing apart the bonds of the structure where the conductress can only navigate these sonic rapids.</p>
+    <p>At the invitation of the conductress, the audience can also join the sound-making during the performance. The emerging harmony of instruments and voices blurs the lines between the audience and the performers, creating a sense of community.</p>
+    <p>The heart of the ensemble is made up of international musicians, whose ties have been intertwined since they studied music together, and on the way, other like-minded individuals have joined them. The camaraderie of the members of the orchestra enables their musical expression to be relaxed, which gives the performances an air of playfulness and homeliness.</p>
+  </section>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      scroll-behavior: smooth;
-      font-family: 'Roboto', sans-serif;
-      background-color: #111;
-      color: #fff;
-      min-height: 100vh;
-    }
-
-    /* --- Transparent fixed header --- */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 10000;
-      background: transparent; /* fully transparent */
-      padding: 20px 0;
-    }
-
-    nav {
-      max-width: 1000px;
-      margin: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0 20px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #fcd34d; /* gold accent */
-    }
-
-
-    /* --- Hero Section with larger height --- */
-    .hero {
-      position: relative;
-      height: 80vh; /* increased from 60vh to 80vh */
-      background: url('../images/tututu-siska-banner.webp') center/cover no-repeat;
-    }
-
-    /* --- About Section --- */
-    .about-section {
-      background-color: #004d4d; /* darker teal */
-      color: #b0d7d7; /* lighter text for contrast */
-      padding: 80px 40px;
-      width: 100%;
-      box-sizing: border-box;
-
-      /* Center content vertically and horizontally */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      min-height: 400px;
-    }
-
-    .about-section h1 {
-      margin-bottom: 40px;
-      font-weight: 700;
-      font-size: 3rem;
-      color: #003737; /* even darker shade for heading */
-      width: 100%;
-      max-width: 900px;
-      font-family: 'Herald Square', serif;
-    }
-
-    .about-section p {
-      max-width: 900px;
-      color: #b0d7d7;
-      line-height: 1.6;
-      font-weight: 500;
-      font-size: 1.15rem;
-      margin-bottom: 20px;
-    }
-
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-    }
-footer a {
-  display: inline-flex;
-  margin: 0 8px;
-}
-
-.icon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  flex-shrink: 0;
-}
-    a {
-      color: #fcd34d;
-    }
-
-    @media (max-width: 1024px) {
-      .about-section {
-        padding: 50px 20px;
-      }
-
-      .about-section p {
-        max-width: 100%;
-        font-size: 1.1rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        height: 60vh; /* smaller height on mobile */
-      }
-
-      .about-section {
-        padding: 40px 15px;
-      }
-
-      .about-section h1 {
-        font-size: 2.2rem;
-      }
-
-      .about-section p {
-        font-size: 1rem;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Transparent Header with Centered Menu -->
-  <header>
-    <nav>
-      <a href="/index.html">Home</a>
-      <a href="/about/">About</a>
-      <a href="/gallery/">Gallery</a>
-      <a href="/press/">Press & Booking</a>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero Image Section -->
-    <section class="hero"></section>
-
-    <!-- Solid Color About Section -->
-    <section class="about-section">
-      <h1>About Us</h1>
-      <p>
-        Tututu Orchestra is a dynamic collective of musicians based in the Netherlands, drawing inspiration from traditions such as jazz, impressionism, and folk music from around the world.
-      </p>
-      <p>
-        The specialty of the orchestra is the use of compositional fragments as a driving force for guided improvisation. With a desire to combine orchestral sound with the fluidity of a small combo, the interplay between the orchestra and the conductress takes center stage — at times full of theatrical expressionism.
-      </p>
-      <p>
-        Under the direction of conductress Mojca Zupančič, the orchestra performs a wide range of compositions full of enchanting melodies, groovy rhythms, and playfully arranged passages. Sometimes, however, the orchestra runs wild, tearing apart the bonds of the structure where the conductress can only navigate these sonic rapids.
-      </p>
-      <p>
-        At the invitation of the conductress, the audience can also join the sound-making during the performance. The emerging harmony of instruments and voices blurs the lines between the audience and the performers, creating a sense of community.
-      </p>
-      <p>
-        The heart of the ensemble is made up of international musicians, whose ties have been intertwined since they studied music together, and on the way, other like-minded individuals have joined them. The camaraderie of the members of the orchestra enables their musical expression to be relaxed, which gives the performances an air of playfulness and homeliness.
-      </p>
-    </section>
-        <section class="about-section">
-      <h1>Selected performances</h1>
-            <p>
-      03.10.2026, Notte Bianca, Valletta, Malta
-      </p>   
-          <p>
-       06.10.2025, Scena Ribnjak, Zagreb, Croatia
-      </p>
-      <p>
-       05.10.2025, Kvaka 22, Belgrade, Serbia
-      </p>
-      <p>
-       04.10.2025, Kino Šiška, Ljubljana, Slovenia: A multidisciplinary performance with guest acrobats, workshop participants and more
-      </p>
-      <p>
-        19.06.2025, The Sun, Rotterdam, Netherlands
-      </p>
-      <p>
-        13.07.2024, Jazz Festival Ljubljana, Ljubljana, Slovenia
-      </p>
-      <p>
-       14.06.2024, Ost-Passage Theater, Leipzig, Germany
-      </p>
-      <p>
-       07. & 08.06.2024, b-flat, Berlin, Germany: Concert of the month
-      </p>
-      <p>
-       29.11.2022, Grand Theatre, Groningen, Netherlands
-      </p>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Tututu Orchestra. All rights reserved.</p>
-                <a href="https://www.youtube.com/@tututu.orchestra" target="_blank" rel="noopener" aria-label="YouTube">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M21.8 8.001a2.75 2.75 0 00-1.936-1.945C18.2 5.6 12 5.6 12 5.6s-6.2 0-7.864.456A2.75 2.75 0 002.2 8.001 28.7 28.7 0 001.75 12a28.7 28.7 0 00.45 3.999 2.75 2.75 0 001.936 1.945C5.8 18.4 12 18.4 12 18.4s6.2 0 7.864-.456a2.75 2.75 0 001.936-1.945A28.7 28.7 0 0022.25 12a28.7 28.7 0 00-.45-3.999zM9.95 15.1V8.9L15.5 12l-5.55 3.1z"/>
-        </svg>
-      </a>
-        <a href="https://instagram.com/tututu.orchestra" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.25 1.5a.75.75 0 110 1.5.75.75 0 010-1.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/>
-        </svg>
-      </a>
-          <a href="https://facebook.com/tututuorchestra" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M22 12a10 10 0 10-11.5 9.87v-6.99H8v-2.88h2.5V9.5a3.5 3.5 0 013.75-3.87 15.64 15.64 0 012.25.2v2.5H14a1.5 1.5 0 00-1.75 1.62v1.87h3l-.5 2.88h-2.5v6.99A10 10 0 0022 12z"/>
-        </svg>
-        </a>
-  </footer>
-
-</body>
-</html>
+  <section class="about-section">
+    <h1>Selected performances</h1>
+    <p>03.10.2026, Notte Bianca, Valletta, Malta</p>
+    <p>06.10.2025, Scena Ribnjak, Zagreb, Croatia</p>
+    <p>05.10.2025, Kvaka 22, Belgrade, Serbia</p>
+    <p>04.10.2025, Kino Šiška, Ljubljana, Slovenia: A multidisciplinary performance with guest acrobats, workshop participants and more</p>
+    <p>19.06.2025, The Sun, Rotterdam, Netherlands</p>
+    <p>13.07.2024, Jazz Festival Ljubljana, Ljubljana, Slovenia</p>
+    <p>14.06.2024, Ost-Passage Theater, Leipzig, Germany</p>
+    <p>07. &amp; 08.06.2024, b-flat, Berlin, Germany: Concert of the month</p>
+    <p>29.11.2022, Grand Theatre, Groningen, Netherlands</p>
+  </section>
+</main>

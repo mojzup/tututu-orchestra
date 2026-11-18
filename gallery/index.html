@@ -1,239 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gallery - Tututu Orchestra</title>
- <link rel="icon" type="image/png" href="/images/sun.png">
-  
-  <!-- Google Font - -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      scroll-behavior: smooth;
-      font-family: 'Roboto', sans-serif;
-      background-color: #111;
-      color: #fff;
-    }
-
-    header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: transparent;
-      padding: 20px 0;
-    }
-
-    nav {
-      max-width: 1000px;
-      margin: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0 20px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #fcd34d;
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 100px;
-      margin-bottom: 40px;
-      color: #fcd34d;
-      font-size: 2.5rem;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      grid-auto-rows: 200px;
-      gap: 15px;
-      padding: 0 40px 60px;
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      cursor: pointer;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.7);
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-item:hover {
-      transform: scale(1.05);
-      z-index: 2;
-      box-shadow: 0 12px 25px rgba(0,0,0,0.9);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      border-radius: 12px;
-    }
-
-    /* Optional: Make some photos bigger for variety */
-    .gallery-item.wide {
-      grid-column: span 2;
-    }
-
-    .gallery-item.tall {
-      grid-row: span 2;
-    }
-
-    .gallery-item.big {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
-
-    @media (max-width: 700px) {
-      .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        grid-auto-rows: 150px;
-        padding: 0 20px 40px;
-      }
-    }
-
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-    }
-footer a {
-  display: inline-flex;
-  margin: 0 8px;
-}
-
-.icon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  flex-shrink: 0;
-}
-    a {
-      color: #fcd34d;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Transparent Header with Centered Menu -->
-  <header>
-    <nav>
-      <a href="/index.html">Home</a>
-      <a href="/about/">About</a>
-      <a href="/gallery/">Gallery</a>
-      <a href="/press/">Press & Booking</a>
-    </nav>
-  </header>
-
-  <h1>Gallery</h1>
+---
+layout: default
+title: Gallery
+description: "Photos of Tututu Orchestra live on stage."
+css: gallery
+---
+<h1>Gallery</h1>
 
 <div class="gallery">
-  <div class="gallery-item ">
-    <img src="../images/tututu-can-demren-1.webp" alt="Credits - Can Demren" loading="lazy" />
+  <div class="gallery-item">
+    <img src="/images/tututu-can-demren-1.webp" alt="Tututu Orchestra on stage, photo by Can Demren" loading="lazy" />
   </div>
-  <div class="gallery-item wide">
-    <img src="../images/tututu-can-demren-2.webp" alt="Credits - Can Demren" loading="lazy" />
+  <div class="gallery-item wide".strip()>
+    <img src="/images/tututu-can-demren-2.webp" alt="Tututu Orchestra on stage, photo by Can Demren" loading="lazy" />
   </div>
-  <div class="gallery-item tall">
-    <img src="../images/tututu-can-demren-3.webp" alt="Credits - Can Demren" loading="lazy" />
+  <div class="gallery-item tall".strip()>
+    <img src="/images/tututu-can-demren-3.webp" alt="Tututu Orchestra on stage, photo by Can Demren" loading="lazy" />
   </div>
   <div class="gallery-item">
-    <img src="../images/tututu-can-demren-4.webp" alt="Credits - Can Demren" loading="lazy" />
+    <img src="/images/tututu-can-demren-4.webp" alt="Tututu Orchestra on stage, photo by Can Demren" loading="lazy" />
   </div>
-  <div class="gallery-item big">
-    <img src="../images/tututu-can-demren-5.webp" alt="Credits - Can Demren" loading="lazy" />
-  </div>
-  <div class="gallery-item ">
-    <img src="../images/tututu-mim-schneider-1.webp" alt="Credits - Mim Schneider" loading="lazy" />
-  </div>
-  <div class="gallery-item tall">
-    <img src="../images/tututu-mim-schneider-2.webp" alt="Credits - Mim Schneider" loading="lazy" />
-  </div>
-  <div class="gallery-item wide">
-    <img src="../images/tututu-mim-schneider-3.webp" alt="Credits - Mim Schneider" loading="lazy" />
-  </div>
-  <div class="gallery-item big">
-    <img src="../images/tututu-deniz-derbent-1.webp" alt="Credits - Deniz Derbent" loading="lazy" />
-  </div>
-  <div class="gallery-item wide">
-    <img src="../images/tututu-deniz-derbent-2.webp" alt="Credits - Deniz Derbent" loading="lazy" />
-  </div>
-   <div class="gallery-item">
-    <img src="../images/tututu-nina-pernat-2.webp" alt="Credits - Nina Pernat" loading="lazy" />
-  </div>
-  <div class="gallery-item big">
-    <img src="../images/tututu-nina-pernat-1.webp" alt="Credits - Nina Pernat" loading="lazy" />
+  <div class="gallery-item big".strip()>
+    <img src="/images/tututu-can-demren-5.webp" alt="Tututu Orchestra on stage, photo by Can Demren" loading="lazy" />
   </div>
   <div class="gallery-item">
-    <img src="../images/tututu-nina-pernat-3.webp" alt="Credits - Nina Pernat" loading="lazy" />
+    <img src="/images/tututu-mim-schneider-1.webp" alt="Tututu Orchestra on stage, photo by Mim Schneider" loading="lazy" />
   </div>
-  <div class="gallery-item wide">
-    <img src="../images/tututu-nina-pernat-4.webp" alt="Credits - Nina Pernat" loading="lazy" />
+  <div class="gallery-item tall".strip()>
+    <img src="/images/tututu-mim-schneider-2.webp" alt="Tututu Orchestra on stage, photo by Mim Schneider" loading="lazy" />
   </div>
-    <div class="gallery-item ">
-    <img src="../images/tututu-masa-pirc-1.webp" alt="Credits - Maša Pirc" loading="lazy" />
+  <div class="gallery-item wide".strip()>
+    <img src="/images/tututu-mim-schneider-3.webp" alt="Tututu Orchestra on stage, photo by Mim Schneider" loading="lazy" />
   </div>
-      <div class="gallery-item tall">
-    <img src="../images/tututu-masa-pirc-2.webp" alt="Credits - Maša Pirc" loading="lazy" />
+  <div class="gallery-item big".strip()>
+    <img src="/images/tututu-deniz-derbent-1.webp" alt="Tututu Orchestra on stage, photo by Deniz Derbent" loading="lazy" />
   </div>
-      <div class="gallery-item wide">
-    <img src="../images/tututu-masa-pirc-3.webp" alt="Credits - Maša Pirc" loading="lazy" />
+  <div class="gallery-item wide".strip()>
+    <img src="/images/tututu-deniz-derbent-2.webp" alt="Tututu Orchestra on stage, photo by Deniz Derbent" loading="lazy" />
   </div>
-        <div class="gallery-item big">
-    <img src="../images/tututu-masa-pirc-5.webp" alt="Credits - Maša Pirc" loading="lazy" />
+  <div class="gallery-item">
+    <img src="/images/tututu-nina-pernat-2.webp" alt="Tututu Orchestra on stage, photo by Nina Pernat" loading="lazy" />
   </div>
-      <div class="gallery-item wide">
-    <img src="../images/tututu-masa-pirc-4.webp" alt="Credits - Maša Pirc" loading="lazy" />
+  <div class="gallery-item big".strip()>
+    <img src="/images/tututu-nina-pernat-1.webp" alt="Tututu Orchestra on stage, photo by Nina Pernat" loading="lazy" />
   </div>
-
+  <div class="gallery-item">
+    <img src="/images/tututu-nina-pernat-3.webp" alt="Tututu Orchestra on stage, photo by Nina Pernat" loading="lazy" />
+  </div>
+  <div class="gallery-item wide".strip()>
+    <img src="/images/tututu-nina-pernat-4.webp" alt="Tututu Orchestra on stage, photo by Nina Pernat" loading="lazy" />
+  </div>
+  <div class="gallery-item">
+    <img src="/images/tututu-masa-pirc-1.webp" alt="Tututu Orchestra on stage, photo by Maša Pirc" loading="lazy" />
+  </div>
+  <div class="gallery-item tall".strip()>
+    <img src="/images/tututu-masa-pirc-2.webp" alt="Tututu Orchestra on stage, photo by Maša Pirc" loading="lazy" />
+  </div>
+  <div class="gallery-item wide".strip()>
+    <img src="/images/tututu-masa-pirc-3.webp" alt="Tututu Orchestra on stage, photo by Maša Pirc" loading="lazy" />
+  </div>
+  <div class="gallery-item big".strip()>
+    <img src="/images/tututu-masa-pirc-5.webp" alt="Tututu Orchestra on stage, photo by Maša Pirc" loading="lazy" />
+  </div>
+  <div class="gallery-item wide".strip()>
+    <img src="/images/tututu-masa-pirc-4.webp" alt="Tututu Orchestra on stage, photo by Maša Pirc" loading="lazy" />
+  </div>
 </div>
-
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Tututu Orchestra. All rights reserved.</p>
-                <a href="https://www.youtube.com/@tututu.orchestra" target="_blank" rel="noopener" aria-label="YouTube">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M21.8 8.001a2.75 2.75 0 00-1.936-1.945C18.2 5.6 12 5.6 12 5.6s-6.2 0-7.864.456A2.75 2.75 0 002.2 8.001 28.7 28.7 0 001.75 12a28.7 28.7 0 00.45 3.999 2.75 2.75 0 001.936 1.945C5.8 18.4 12 18.4 12 18.4s6.2 0 7.864-.456a2.75 2.75 0 001.936-1.945A28.7 28.7 0 0022.25 12a28.7 28.7 0 00-.45-3.999zM9.95 15.1V8.9L15.5 12l-5.55 3.1z"/>
-        </svg>
-      </a>
-        <a href="https://instagram.com/tututu.orchestra" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.25 1.5a.75.75 0 110 1.5.75.75 0 010-1.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/>
-        </svg>
-      </a>
-          <a href="https://facebook.com/tututuorchestra" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M22 12a10 10 0 10-11.5 9.87v-6.99H8v-2.88h2.5V9.5a3.5 3.5 0 013.75-3.87 15.64 15.64 0 012.25.2v2.5H14a1.5 1.5 0 00-1.75 1.62v1.87h3l-.5 2.88h-2.5v6.99A10 10 0 0022 12z"/>
-        </svg>
-        </a>
-  </footer>
-
-</body>
-</html>
