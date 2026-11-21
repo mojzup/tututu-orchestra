@@ -1,38 +1,7 @@
 header { position: fixed; z-index: 10000; }
-
-/* Hero */
-.about-hero { position: relative; height: 70vh; min-height: 420px; background: #003737; overflow: hidden; }
-.about-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.about-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,0) 40%, #004d4d 100%); }
-.about-hero-text { position: absolute; left: 0; right: 0; bottom: 48px; z-index: 1; max-width: 760px; margin: 0 auto; padding: 0 24px; }
-.eyebrow { letter-spacing: .25em; text-transform: uppercase; font-size: .85rem; color: #fcd34d; margin-bottom: 10px; }
-.about-hero h1 { font-family: 'Herald Square', serif; font-weight: 400; font-size: 3.4rem; line-height: 1.1; color: #fff; }
-
-/* Story */
-.story { background: #004d4d; padding: 30px 24px 90px; }
-.story-inner { max-width: 760px; margin: 0 auto; }
-.story-inner::before { content: ""; display: block; width: 56px; height: 3px; background: #fcd34d; margin-bottom: 34px; }
-.story p { color: #cfe6e6; font-size: 1.12rem; line-height: 1.75; font-weight: 400; text-align: justify; hyphens: auto; margin-bottom: 22px; }
-.story p.lead { font-size: 1.35rem; line-height: 1.6; color: #fff; }
-.story p:last-child { margin-bottom: 0; }
-
-/* Selected performances */
-.live { background: #111; padding: 90px 24px 100px; }
-.live h2 { font-family: 'Herald Square', serif; font-weight: 400; font-size: 2.4rem; color: #fcd34d; max-width: 760px; margin: 0 auto 48px; }
-.years { max-width: 760px; margin: 0 auto; }
-.year-row { display: grid; grid-template-columns: 120px 1fr; gap: 24px; padding: 26px 0; border-top: 1px solid #2a2a2a; }
-.year-row:last-child { border-bottom: 1px solid #2a2a2a; }
-.year-row h3 { font-family: 'Herald Square', serif; font-weight: 400; font-size: 2rem; color: #019297; }
-.year-row ul { list-style: none; }
-.year-row li { padding: 6px 0; line-height: 1.5; }
-.venue { color: #fff; font-size: 1.1rem; margin-right: 10px; }
-.place { color: #9a9a9a; }
-.note { display: block; color: #b0d7d7; font-size: .95rem; margin-top: 2px; }
-
-@media (max-width: 768px) {
-  .about-hero { height: 60vh; }
-  .about-hero h1 { font-size: 2.3rem; }
-  .story p { text-align: left; font-size: 1.05rem; }
-  .story p.lead { font-size: 1.2rem; }
-  .year-row { grid-template-columns: 1fr; gap: 8px; }
-}
+.hero { height: 80vh; background: url('/images/tututu-siska-banner.webp') center/cover no-repeat; }
+.about-section { background: #004d4d; color: #b0d7d7; padding: 80px 40px; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 400px; }
+.about-section h1 { margin-bottom: 40px; font-weight: 700; font-size: 3rem; color: #003737; width: 100%; max-width: 900px; font-family: 'Herald Square', serif; }
+.about-section p { max-width: 900px; color: #b0d7d7; line-height: 1.6; font-weight: 500; font-size: 1.15rem; margin-bottom: 20px; }
+@media (max-width: 1024px) { .about-section { padding: 50px 20px; } .about-section p { max-width: 100%; font-size: 1.1rem; } }
+@media (max-width: 768px) { .hero { height: 60vh; } .about-section { padding: 40px 15px; } .about-section h1 { font-size: 2.2rem; } .about-section p { font-size: 1rem; } }4
