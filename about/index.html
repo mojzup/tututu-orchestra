@@ -1,31 +1,22 @@
----
-layout: default
-title: About
-description: "About Tututu Orchestra, an international conducted improvisation orchestra led by Mojca Zupančič."
-css: about
----
-<main>
-  <section class="hero"></section>
+header { position: fixed; z-index: 10000; }
+.hero { height: 80vh; background: url('/images/tututu-siska-banner.webp') center/cover no-repeat; }
+.about-section { background: #004d4d; color: #b0d7d7; padding: 80px 40px; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 400px; }
+.about-section h1 { margin-bottom: 40px; font-weight: 400; font-size: 3rem; color: #003737; width: 100%; max-width: 900px; font-family: 'Herald Square', serif; }
+.about-section p { max-width: 900px; color: #b0d7d7; line-height: 1.6; font-weight: 400; font-size: 1.15rem; margin-bottom: 20px; }
 
-  <section class="about-section">
-    <h1>About Us</h1>
-    <p>Tututu Orchestra is a dynamic collective of musicians based in the Netherlands, drawing inspiration from traditions such as jazz, impressionism, and folk music from around the world.</p>
-    <p>The specialty of the orchestra is the use of compositional fragments as a driving force for guided improvisation. With a desire to combine orchestral sound with the fluidity of a small combo, the interplay between the orchestra and the conductress takes center stage — at times full of theatrical expressionism.</p>
-    <p>Under the direction of conductress Mojca Zupančič, the orchestra performs a wide range of compositions full of enchanting melodies, groovy rhythms, and playfully arranged passages. Sometimes, however, the orchestra runs wild, tearing apart the bonds of the structure where the conductress can only navigate these sonic rapids.</p>
-    <p>At the invitation of the conductress, the audience can also join the sound-making during the performance. The emerging harmony of instruments and voices blurs the lines between the audience and the performers, creating a sense of community.</p>
-    <p>The heart of the ensemble is made up of international musicians, whose ties have been intertwined since they studied music together, and on the way, other like-minded individuals have joined them. The camaraderie of the members of the orchestra enables their musical expression to be relaxed, which gives the performances an air of playfulness and homeliness.</p>
-  </section>
+/* About text: justified like Word */
+.story p { width: 100%; text-align: justify; hyphens: auto; }
 
-  <section class="about-section">
-    <h1>Selected performances</h1>
-    <p>03.10.2026, Notte Bianca, Valletta, Malta</p>
-    <p>06.10.2025, Scena Ribnjak, Zagreb, Croatia</p>
-    <p>05.10.2025, Kvaka 22, Belgrade, Serbia</p>
-    <p>04.10.2025, Kino Šiška, Ljubljana, Slovenia: A multidisciplinary performance with guest acrobats, workshop participants and more</p>
-    <p>19.06.2025, The Sun, Rotterdam, Netherlands</p>
-    <p>13.07.2024, Jazz Festival Ljubljana, Ljubljana, Slovenia</p>
-    <p>14.06.2024, Ost-Passage Theater, Leipzig, Germany</p>
-    <p>07. &amp; 08.06.2024, b-flat, Berlin, Germany: Concert of the month</p>
-    <p>29.11.2022, Grand Theatre, Groningen, Netherlands</p>
-  </section>
-</main>
+/* Notable performances by year */
+.years { width: 100%; max-width: 760px; }
+.year-row { display: grid; grid-template-columns: 110px 1fr; gap: 24px; padding: 24px 0; border-top: 1px solid rgba(176,215,215,.25); text-align: left; }
+.year-row:last-child { border-bottom: 1px solid rgba(176,215,215,.25); }
+.year-row h2 { font-family: 'Herald Square', serif; font-weight: 400; font-size: 2.2rem; line-height: 1; color: #fcd34d; }
+.year-row p { max-width: none; margin: 0 0 10px; }
+.year-row p:last-child { margin-bottom: 0; }
+.venue { color: #fff; margin-right: 8px; }
+.place { color: #b0d7d7; }
+.note { display: block; font-size: .95rem; opacity: .8; margin-top: 2px; }
+
+@media (max-width: 1024px) { .about-section { padding: 50px 20px; } .about-section p { max-width: 100%; font-size: 1.1rem; } }
+@media (max-width: 768px) { .hero { height: 60vh; } .about-section { padding: 40px 15px; } .about-section h1 { font-size: 2.2rem; } .about-section p { font-size: 1rem; }
