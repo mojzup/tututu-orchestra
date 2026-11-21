@@ -4,6 +4,10 @@ header { position: fixed; z-index: 10000; }
 .about-section h1 { margin-bottom: 40px; font-weight: 400; font-size: 3rem; color: #003737; width: 100%; max-width: 900px; font-family: 'Herald Square', serif; }
 .about-section p { max-width: 900px; color: #b0d7d7; line-height: 1.6; font-weight: 400; font-size: 1.15rem; margin-bottom: 20px; }
 
+/* Photo fades into the teal section; the title sits inside the fade */
+.story { margin-top: -200px; padding-top: 110px; background: linear-gradient(to bottom, rgba(0,77,77,0) 0, rgba(0,77,77,.55) 100px, #004d4d 200px); }
+.story h1 { color: #fff; }
+
 /* About text: justified like Word */
 .story p { width: 100%; text-align: justify; hyphens: auto; }
 
@@ -18,5 +22,5 @@ header { position: fixed; z-index: 10000; }
 .place { color: #b0d7d7; }
 .note { display: block; font-size: .95rem; opacity: .8; margin-top: 2px; }
 
-@media (max-width: 1024px) { .about-section { padding: 50px 20px; } .about-section p { max-width: 100%; font-size: 1.1rem; } }
-@media (max-width: 768px) { .hero { height: 60vh; } .about-section { padding: 40px 15px; } .about-section h1 { font-size: 2.2rem; } .about-section p { font-size: 1rem; } .story p { text-align: left; } .year-row { grid-template-columns: 1fr; gap: 8px; } }
+@media (max-width: 1024px) { .about-section { padding: 50px 20px; } .story { padding-top: 110px; } .about-section p { max-width: 100%; font-size: 1.1rem; } }
+@media (max-width: 768px) { .hero { height: 60vh; } .about-section { padding: 40px 15px; } .story { margin-top: -140px; padding-top: 90px; } .about-section h1 { font-size: 2.2rem; } .about-section p { font-size: 1rem; } .story p { text-align: left; } .year-row { grid-template-columns: 1fr; gap: 8px; } }
